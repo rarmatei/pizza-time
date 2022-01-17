@@ -1,0 +1,6 @@
+{
+  "root": "apps/monorepo-pizza",
+  "sourceRoot": "apps/monorepo-pizza/src",
+  "projectType": "application",
+  "tags": []
+}
