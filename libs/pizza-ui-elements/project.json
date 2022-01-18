@@ -1,0 +1,23 @@
+{
+  "root": "libs/pizza-ui-elements",
+  "sourceRoot": "libs/pizza-ui-elements/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/pizza-ui-elements/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/pizza-ui-elements"],
+      "options": {
+        "jestConfig": "libs/pizza-ui-elements/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

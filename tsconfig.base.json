@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@monorepo-pizza/pizza-ui-elements": [
+        "libs/pizza-ui-elements/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

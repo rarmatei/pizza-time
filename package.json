@@ -10,16 +10,16 @@
   },
   "private": true,
   "dependencies": {
-    "core-js": "^3.6.5",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "regenerator-runtime": "0.13.7",
-    "tslib": "^2.0.0",
     "@chakra-ui/icons": "^1.1.1",
     "@chakra-ui/react": "^1.7.4",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
-    "@snek-at/storybook-addon-chakra-ui": "^1.0.0-beta.1"
+    "@snek-at/storybook-addon-chakra-ui": "^1.0.0-beta.1",
+    "core-js": "^3.6.5",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "regenerator-runtime": "0.13.7",
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@craco/craco": "^6.4.3",
@@ -42,6 +42,7 @@
     "@types/react-dom": "17.0.9",
     "@typescript-eslint/eslint-plugin": "~5.3.0",
     "@typescript-eslint/parser": "~5.3.0",
+    "babel-jest": "27.2.3",
     "cypress": "^9.1.0",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.1.0",

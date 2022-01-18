@@ -1,40 +1,41 @@
-import React, { useRef, useState } from "react";
-import styles from "./app.module.css";
-import { Button, ButtonGroup, Heading } from "@chakra-ui/react";
-import { calculatePercentageComplete } from "./util";
-import PizzaRadioButtons from "./PizzaRadioButtons";
-import PizzaImage from "./PizzaImage";
-import PizzaForm from "./PizzaForm";
-import PizzaInput from "./PizzaInput";
-import PizzaMultiSelect from "./PizzaUiMultiSelect";
-import PizzaProgressMeter from "./PizzaProgressMeter";
+import React, { useRef, useState } from 'react';
+import styles from './app.module.css';
+import { Button, ButtonGroup, Heading } from '@chakra-ui/react';
+import { calculatePercentageComplete } from './util';
+import PizzaRadioButtons from './PizzaRadioButtons';
+import PizzaImage from './PizzaImage';
+import PizzaForm from './PizzaForm';
+import PizzaInput from './PizzaInput';
+import PizzaMultiSelect from './PizzaUiMultiSelect';
+import PizzaProgressMeter from './PizzaProgressMeter';
+import { PizzaButton } from '@monorepo-pizza/pizza-ui-elements';
 
 export function App() {
   const formRef = useRef();
   const options = [
     {
-      value: "slice",
+      value: 'slice',
       image: (
         <PizzaImage
-          imageSrc={process.env.PUBLIC_URL + "slice.png"}
+          imageSrc={process.env.PUBLIC_URL + 'slice.png'}
           description="The Single Library"
         />
       ),
     },
     {
-      value: "half",
+      value: 'half',
       image: (
         <PizzaImage
-          imageSrc={process.env.PUBLIC_URL + "half.png"}
+          imageSrc={process.env.PUBLIC_URL + 'half.png'}
           description="The 50% affected"
         />
       ),
     },
     {
-      value: "full",
+      value: 'full',
       image: (
         <PizzaImage
-          imageSrc={process.env.PUBLIC_URL + "full.png"}
+          imageSrc={process.env.PUBLIC_URL + 'full.png'}
           description="The Full Monorepo"
         />
       ),
@@ -42,10 +43,10 @@ export function App() {
   ];
 
   const toppings = [
-    { label: "🍄 Mushrooms.json", value: "mushrooms" },
-    { label: "🧀 Generated Cheese", value: "cheese" },
-    { label: "🐟 Cached Tuna", value: "tuna" },
-    { label: "🍍 Dependency Graph Pineapple", value: "pineapple" },
+    { label: '🍄 Mushrooms.json', value: 'mushrooms' },
+    { label: '🧀 Generated Cheese', value: 'cheese' },
+    { label: '🐟 Cached Tuna', value: 'tuna' },
+    { label: '🍍 Dependency Graph Pineapple', value: 'pineapple' },
   ];
 
   const [percentageComplete, setPercentageComplete] = useState(0);
@@ -77,9 +78,10 @@ export function App() {
           isAnimated
         />
         <ButtonGroup spacing={4}>
-          <Button disabled={percentageComplete < 100} colorScheme="teal">
-            Order pizza
-          </Button>
+          <PizzaButton
+            disabled={percentageComplete < 100}
+            label="Order Pizza"
+          ></PizzaButton>
           <Button variant="outline">Reset</Button>
         </ButtonGroup>
       </PizzaForm>
