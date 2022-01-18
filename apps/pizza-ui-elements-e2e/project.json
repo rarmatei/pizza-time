@@ -1,0 +1,28 @@
+{
+  "root": "apps/pizza-ui-elements-e2e",
+  "sourceRoot": "apps/pizza-ui-elements-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/pizza-ui-elements-e2e/cypress.json",
+        "devServerTarget": "pizza-ui-elements:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "pizza-ui-elements:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/pizza-ui-elements-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["pizza-ui-elements"]
+}
